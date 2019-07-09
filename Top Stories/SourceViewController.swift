@@ -17,15 +17,19 @@ class SourceViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "News Source"
         let query = "https://newsapi.org/v1/sources?language=en&country=us&apiKey=\(apiKey)"
-        if let url = URL(string: query) {
-            if let data = try? Data (contentsOf: url){
-                let json = try! JSON(data: data)
-                if json["status"] == "ok" {
-                    parse(json: json)
-                    return
+        DispatchQueue.global(qos: .userInitiated).async {
+            [unowned self] in
+            if let url = URL(string: query) {
+                if let data = try? Data (contentsOf: url){
+                    let json = try! JSON(data: data)
+                    if json["status"] == "ok" {
+                        self.parse(json: json)
+                        return
+                    }
                 }
+                
             }
-            
+            self.loadError()
         }
     }
     
@@ -37,6 +41,10 @@ class SourceViewController: UITableViewController {
             let source = ["id": id, "name": name, "description": description]
             sources.append(source)
         }
+        DispatchQueue.main.async {
+            [unowned self] in
+            self.tableView.reloadData()
+        }
         tableView.reloadData()
     }
     
@@ -47,12 +55,12 @@ class SourceViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return sources.count
+        return sources.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let source = sources [indexPath.row]
+        let source = sources[indexPath.row]
         cell.textLabel?.text = source["name"]
         cell.detailTextLabel?.text = source["description"]
         return cell
