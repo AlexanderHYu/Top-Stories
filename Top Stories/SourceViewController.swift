@@ -45,7 +45,6 @@ class SourceViewController: UITableViewController {
             [unowned self] in
             self.tableView.reloadData()
         }
-        tableView.reloadData()
     }
     
     func loadError() {

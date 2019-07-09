@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="PqB-NI-J1m" kind="show" id="WF2-LR-Nn4"/>
+                                    <segue destination="PqB-NI-J1m" kind="show" id="OKk-FC-uG5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,14 +52,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="B9Y-Yp-Zcv">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="olV-3n-nfq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oiy-N0-FuJ">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="olV-3n-nfq">
                             <connections>
-                                <action selector="onTappedDoneButton:" destination="Ybc-dJ-iNx" id="u4M-OS-DRS"/>
+                                <action selector="onTappedDoneButton:" destination="Ybc-dJ-iNx" id="Udk-3w-UHd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="149.27536231884059" y="81.696428571428569"/>
         </scene>
-        <!--Source View Controller-->
+        <!--Articles View Controller-->
         <scene sceneID="qzl-gE-WBg">
             <objects>
-                <tableViewController id="PqB-NI-J1m" customClass="SourceViewController" customModule="Top_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PqB-NI-J1m" customClass="ArticlesViewController" customModule="Top_Stories" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AIU-dh-U4g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
