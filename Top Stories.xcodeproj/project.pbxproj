@@ -14,6 +14,7 @@
 		5B55748322D4E53200A716CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B55748122D4E53200A716CD /* LaunchScreen.storyboard */; };
 		5B55748E22D4E53300A716CD /* Top_StoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55748D22D4E53300A716CD /* Top_StoriesTests.swift */; };
 		5B55749922D4E53300A716CD /* Top_StoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55749822D4E53300A716CD /* Top_StoriesUITests.swift */; };
+		5BAF634822D4E85F00F0049E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF634722D4E85F00F0049E /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5B55749422D4E53300A716CD /* Top StoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Top StoriesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B55749822D4E53300A716CD /* Top_StoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_StoriesUITests.swift; sourceTree = "<group>"; };
 		5B55749A22D4E53300A716CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAF634722D4E85F00F0049E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5B55747F22D4E53200A716CD /* Assets.xcassets */,
 				5B55748122D4E53200A716CD /* LaunchScreen.storyboard */,
 				5B55748422D4E53200A716CD /* Info.plist */,
+				5BAF634722D4E85F00F0049E /* SwiftyJSON.swift */,
 			);
 			path = "Top Stories";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAF634822D4E85F00F0049E /* SwiftyJSON.swift in Sources */,
 				5B55747B22D4E53000A716CD /* SourceViewController.swift in Sources */,
 				5B55747922D4E53000A716CD /* AppDelegate.swift in Sources */,
 			);
